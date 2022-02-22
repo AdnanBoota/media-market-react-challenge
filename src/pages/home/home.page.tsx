@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
     return (
         <Container>
             <Row>
-                <Col lg={{ span: 8, offset: 2 }}><IssueSearchGrid /></Col>
+                <Col className="mt-3" lg={{ span: 8, offset: 2 }}><IssueSearchGrid /></Col>
             </Row>
         </Container>
     );

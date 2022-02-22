@@ -14,7 +14,9 @@ const IssuePage: React.FC = () => {
     return (
         <Container>
             <Row>
-                <Col lg={{ span: 8, offset: 2 }}>{issue ? <IssuesItem key={issue.number} issue={issue} /> : ''}</Col>
+                <Col className="mt-3" lg={{ span: 8, offset: 2 }}>
+                    {issue ? <IssuesItem key={issue.number} issue={issue} /> : undefined}
+                </Col>
             </Row>
         </Container>
     );

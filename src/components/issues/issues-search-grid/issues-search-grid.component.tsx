@@ -65,12 +65,14 @@ const IssueSearchGrid: React.FC<IssueSearchProps> = (IssueSearchProps: IssueSear
         value={searchText}
         onChange={(e: any) => setSearchText(e.target.value)}
       />
+      <div className="mt-4">
+        {data?.search?.edges.length !== 0 ? data?.search?.edges.map((k: any) => k.node).map((issue: Issue) => (
+          <IssuesItem key={issue.number} issue={issue} />
+        )) : 'No Results Found'}
+      </div>
 
-      {data?.search?.edges.map((k: any) => k.node).map((issue: Issue) => (
-        <IssuesItem key={issue.number} issue={issue} />
-      ))}
     </div>
   );
 }
 
-export default IssueSearchGrid;
+export default IssueSearchGrid; 
